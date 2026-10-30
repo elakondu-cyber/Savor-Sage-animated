@@ -1,5 +1,3 @@
-# Savor-Sage-animated
-A fully animated, multi-page luxury restaurant website template built with pure HTML and CSS.
 # 🍷 Savor & Sage — Luxury Animated Restaurant Website Template
 
 A modern, responsive, multi-page restaurant website template built with pure **HTML5 and CSS3**. Designed with fluid micro-interactions, cinematic scroll triggers, and smooth keyframe animations to deliver a high-end digital dining experience.
