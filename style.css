@@ -88,7 +88,7 @@ body {
   color: var(--accent);
 }
 
-/* HERO SECTION WITH CINEMATIC ZOOM */
+/* HERO SECTION */
 .hero {
   height: 85vh;
   position: relative;
@@ -136,7 +136,7 @@ body {
   opacity: 0;
 }
 
-/* BUTTON STYLES */
+/* BUTTONS */
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -166,7 +166,14 @@ body {
   color: white;
 }
 
-/* SECTION 2: STORY & CHEF PRESENTATION */
+.btn-full {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* STORY SECTION */
 .story-section {
   padding: 80px 20px;
   background-color: #ffffff;
@@ -224,7 +231,7 @@ body {
   transform: scale(1.08);
 }
 
-/* PAGE HEADERS (For inner pages) */
+/* PAGE HEADERS */
 .page-header {
   text-align: center;
   padding: 60px 20px 20px;
@@ -243,7 +250,7 @@ body {
   color: #cbd5e1;
 }
 
-/* HIGHLIGHTS / GRID SECTIONS */
+/* CONTAINERS & GRIDS */
 .highlights-section {
   padding: 80px 20px;
   background-color: var(--bg);
@@ -253,6 +260,11 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.menu-section, .form-section {
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 .section-title {
@@ -268,6 +280,7 @@ body {
   gap: 30px;
 }
 
+/* CARDS */
 .card {
   background: var(--card-bg);
   border-radius: 15px;
@@ -275,6 +288,10 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
   animation: fadeInUp 1s ease-out forwards;
+}
+
+.card.hide {
+  display: none;
 }
 
 .card:hover {
@@ -310,6 +327,32 @@ body {
   font-weight: bold;
 }
 
+/* CATEGORY FILTER BUTTONS */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* FORM STYLING */
 .form-card {
   max-width: 600px;
@@ -339,7 +382,7 @@ body {
   border-radius: 8px;
   outline: none;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-group input:focus {
