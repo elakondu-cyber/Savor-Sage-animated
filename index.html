@@ -1,85 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Savor & Sage — Luxury Culinary Experience</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Savor & Sage — A refined dining experience.">
+
+    <title>Savor & Sage | Fine Dining</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">Savor & Sage</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="contact.html">Contact & Booking</a></li>
-    </ul>
-  </nav>
+<div class="announcement">
+    A THOUGHTFUL DINING EXPERIENCE
+    <span>✦</span>
+    RESERVATIONS NOW OPEN
+</div>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Savor & Sage</h1>
-      <p>Where passion meets the plate. Experience exquisite dining crafted with organic ingredients and timeless elegance.</p>
-      <div class="hero-btns">
-        <a href="menu.html" class="btn">Explore Menu</a>
-        <a href="contact.html" class="btn btn-outline">Reserve a Table</a>
-      </div>
-    </div>
-  </header>
+<header class="site-header">
 
-  <!-- Culinary Story Section -->
-  <section class="story-section">
-    <div class="container story-grid">
-      <div class="story-text">
-        <span class="sub-heading">Artistry in Motion</span>
-        <h2>From Chef's Hands to Your Table</h2>
-        <p>Every dish tells a story. Watch as our master chefs hand-craft each plate, blending rich aromas, vibrant colors, and precise culinary techniques before it gracefully lands at your table.</p>
-        <p>We invite you to sit back, smile, share stories with loved ones, and immerse yourself in an unforgettable sensory journey.</p>
-      </div>
-      <div class="story-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Guests dining in restaurant ambiance" class="animated-img">
-      </div>
-    </div>
-  </section>
+    <a href="index.html" class="brand">
+        <span class="brand-mark">S<span>&</span>S</span>
 
-  <!-- Highlights Section -->
-  <section class="highlights-section">
-    <div class="container">
-      <h2 class="section-title">An Immersive Dining Standard</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=600&q=80" alt="Chef presentation">
-          <div class="card-content">
-            <h3 class="card-title"><span>Master Chefs</span></h3>
-            <p>Years of refined technique delivering flawless presentations straight to your seat.</p>
-          </div>
+        <span class="brand-name">
+            SAVOR <i>&</i> SAGE
+            <small>RESTAURANT · EST. 2026</small>
+        </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="main-nav">
+
+        <a href="index.html" class="active">Home</a>
+        <a href="menu.html">Our Menu</a>
+        <a href="contact.html">Visit Us</a>
+
+        <a href="contact.html#reservation" class="nav-cta">
+            Book a Table <span>↗</span>
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-image"></div>
+        <div class="hero-shade"></div>
+
+        <div class="hero-content">
+
+            <p class="eyebrow reveal">
+                SEASONAL INGREDIENTS · TIMELESS CRAFT
+            </p>
+
+            <h1 class="reveal">
+                Where every<br>
+                <em>moment</em> is savoured.
+            </h1>
+
+            <p class="hero-copy reveal">
+                A considered approach to dining, where beautiful
+                ingredients, thoughtful technique and warm
+                hospitality meet.
+            </p>
+
+            <div class="hero-actions reveal">
+
+                <a href="menu.html" class="button button-gold">
+                    Explore the Menu <span>↗</span>
+                </a>
+
+                <a href="contact.html#reservation" class="text-link light-link">
+                    Reserve Your Evening →
+                </a>
+
+            </div>
+
         </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Atmosphere">
-          <div class="card-content">
-            <h3 class="card-title"><span>Intimate Ambiance</span></h3>
-            <p>Surround yourself with smiling faces, warm lighting, and soft ambient sounds.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Organic ingredients">
-          <div class="card-content">
-            <h3 class="card-title"><span>Organic Ingredients</span></h3>
-            <p>Locally sourced, farm-fresh produce prepared daily for peak flavor.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Savor & Sage Restaurant. All Rights Reserved.</p>
-  </footer>
+        <div class="hero-caption">
+            <span>01 / 03</span>
+            <span>THE ART OF THE TABLE</span>
+            <span>SCROLL TO DISCOVER ↓</span>
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro section-pad">
+
+        <div class="intro-side">
+            <span class="vertical-label">OUR PHILOSOPHY</span>
+            <span class="fine-line"></span>
+        </div>
+
+        <div class="intro-main">
+
+            <p class="eyebrow reveal">A PLACE TO PAUSE</p>
+
+            <h2 class="section-title reveal">
+                Good food. Good company.
+                <br>
+                <em>Nothing ordinary.</em>
+            </h2>
+
+            <div class="intro-bottom reveal">
+
+                <p>
+                    At Savor & Sage, dining is more than what arrives
+                    at the table. It is the anticipation, the
+                    conversation, the delicate details and the
+                    pleasure of taking your time.
+                </p>
+
+                <a href="contact.html" class="text-link">
+                    Discover Our Story →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURE -->
+
+    <section class="feature-grid">
+
+        <div class="feature-photo reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
+                alt="Fine dining restaurant table"
+            >
+
+        </div>
+
+        <div class="feature-copy reveal">
+
+            <p class="eyebrow">THE SAVOR & SAGE EXPERIENCE</p>
+
+            <h2 class="section-title">
+                Crafted with care.
+                <br>
+                <em>Served with soul.</em>
+            </h2>
+
+            <p>
+                Our kitchen celebrates seasonal produce and
+                considered flavours. Each plate is composed
+                with intention, balancing familiar comforts
+                with a little discovery.
+            </p>
+
+            <a href="menu.html" class="button button-outline">
+                Discover the Menu ↗
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SIGNATURE DISHES -->
+
+    <section class="signature section-pad">
+
+        <div class="section-heading reveal">
+
+            <div>
+
+                <p class="eyebrow">A TASTE OF WHAT'S TO COME</p>
+
+                <h2 class="section-title">
+                    House <em>signatures</em>
+                </h2>
+
+            </div>
+
+            <a href="menu.html" class="text-link">
+                View Full Menu →
+            </a>
+
+        </div>
+
+
+        <div class="signature-grid">
+
+            <article class="dish-card reveal">
+
+                <div class="dish-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85"
+                        alt="Fresh seasonal salad"
+                    >
+
+                    <span class="dish-number">01</span>
+
+                </div>
+
+                <div class="dish-meta">
+                    <h3>Garden in Bloom</h3>
+                    <span>Seasonal Selection</span>
+                </div>
+
+                <p>
+                    A vibrant composition of market vegetables,
+                    herbs and bright citrus.
+                </p>
+
+            </article>
+
+
+            <article class="dish-card reveal">
+
+                <div class="dish-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=85"
+                        alt="Chef prepared salmon"
+                    >
+
+                    <span class="dish-number">02</span>
+
+                </div>
+
+                <div class="dish-meta">
+                    <h3>The Sage Plate</h3>
+                    <span>Chef's Signature</span>
+                </div>
+
+                <p>
+                    A thoughtful main course inspired by the
+                    season and the chef's craft.
+                </p>
+
+            </article>
+
+
+            <article class="dish-card reveal">
+
+                <div class="dish-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85"
+                        alt="Elegant berry dessert"
+                    >
+
+                    <span class="dish-number">03</span>
+
+                </div>
+
+                <div class="dish-meta">
+                    <h3>Velvet & Berry</h3>
+                    <span>Something Sweet</span>
+                </div>
+
+                <p>
+                    A delicate finish with silky textures
+                    and a fresh seasonal note.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUOTE -->
+
+    <section class="quote-band">
+
+        <div class="quote-inner reveal">
+
+            <span class="quote-mark">“</span>
+
+            <p>
+                Make room for the moments
+                <br>
+                that deserve to be savoured.
+            </p>
+
+            <span class="eyebrow">THE SAVOR & SAGE WAY</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESERVATION CTA -->
+
+    <section class="cta-section section-pad">
+
+        <div class="cta-inner reveal">
+
+            <p class="eyebrow">YOUR TABLE IS WAITING</p>
+
+            <h2 class="section-title">
+                An evening worth
+                <br>
+                <em>looking forward to.</em>
+            </h2>
+
+            <a href="contact.html#reservation" class="button button-gold">
+                Make a Reservation ↗
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-top">
+
+        <a href="index.html" class="brand footer-brand">
+
+            <span class="brand-mark">S<span>&</span>S</span>
+
+            <span class="brand-name">
+                SAVOR <i>&</i> SAGE
+                <small>RESTAURANT · EST. 2026</small>
+            </span>
+
+        </a>
+
+        <p>Thoughtful food. Meaningful moments.</p>
+
+        <a href="#" class="back-top">Back to Top ↑</a>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            © <span data-year></span> Savor & Sage.
+            All rights reserved.
+        </span>
+
+        <span>Made for lingering a little longer.</span>
+
+        <div>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+</footer>
 
 </body>
 </html>

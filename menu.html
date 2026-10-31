@@ -1,159 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Savor & Sage — Interactive Menu</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the carefully curated menu at Savor & Sage.">
+    <title>Our Menu | Savor & Sage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">Savor & Sage</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html" class="active">Menu</a></li>
-      <li><a href="contact.html">Contact & Booking</a></li>
-    </ul>
-  </nav>
+<header class="site-header">
+    <a href="index.html" class="brand">
+        SAVOR <span>&</span> SAGE
+        <small>THE ART OF FINE DINING</small>
+    </a>
 
-  <!-- Menu Header -->
-  <header class="page-header">
-    <h1>Our Culinary Offerings</h1>
-    <p>Filter by category to explore our signature main dishes, fast bites, and handcrafted drinks.</p>
-  </header>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+    </button>
 
-  <section class="container menu-section">
-    
-    <!-- Category Filter Buttons -->
-    <div class="filter-container">
-      <button class="filter-btn active" data-filter="all">All Items</button>
-      <button class="filter-btn" data-filter="food">Main Dishes</button>
-      <button class="filter-btn" data-filter="fastfood">Fast Food</button>
-      <button class="filter-btn" data-filter="drinks">Drinks</button>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="contact.html">Reservations</a>
+        <a href="contact.html" class="nav-cta">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <span class="eyebrow">A TASTE OF EXCELLENCE</span>
+            <h1>Our <em>Menu</em></h1>
+            <p>
+                Thoughtfully sourced ingredients, refined techniques
+                and unforgettable flavours.
+            </p>
+        </div>
+    </section>
+
+    <section class="menu-section">
+
+        <div class="section-heading reveal">
+            <span class="eyebrow">CURATED WITH PASSION</span>
+            <h2>Discover Our <em>Selections</em></h2>
+            <p>Every dish tells a story. Find your next favourite.</p>
+        </div>
+
+        <div class="menu-tools reveal">
+
+            <div class="menu-search">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    type="search"
+                    id="menuSearch"
+                    placeholder="Search dishes..."
+                    aria-label="Search menu"
+                >
+            </div>
+
+            <div class="menu-filters" role="group" aria-label="Filter menu">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="starters">Starters</button>
+                <button class="filter-btn" data-filter="mains">Mains</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+
+            <!-- STARTERS -->
+
+            <article class="menu-card reveal" data-category="starters" data-name="artisanal burrata salad">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=900" alt="Fresh burrata salad">
+                    <span class="dish-tag">STARTER</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Artisanal Burrata Salad</h3>
+                        <span class="price">$18</span>
+                    </div>
+                    <p>Creamy burrata, heirloom tomatoes, fresh basil and aged balsamic.</p>
+                    <button class="details-btn"
+                        data-title="Artisanal Burrata Salad"
+                        data-price="$18"
+                        data-description="A delicate arrangement of creamy burrata, seasonal heirloom tomatoes, fresh basil leaves and aged balsamic glaze."
+                        data-category="Starter">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="starters" data-name="wild mushroom velouté">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=900" alt="Mushroom soup">
+                    <span class="dish-tag">STARTER</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Wild Mushroom Velouté</h3>
+                        <span class="price">$16</span>
+                    </div>
+                    <p>Silky mushroom soup, aromatic herbs and toasted sourdough.</p>
+                    <button class="details-btn"
+                        data-title="Wild Mushroom Velouté"
+                        data-price="$16"
+                        data-description="A smooth and comforting mushroom velouté finished with aromatic herbs and served with toasted sourdough."
+                        data-category="Starter">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="starters" data-name="seared scallops">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=900" alt="Seafood starter">
+                    <span class="dish-tag">STARTER</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Seared Scallops</h3>
+                        <span class="price">$24</span>
+                    </div>
+                    <p>Golden scallops, citrus butter and delicate seasonal greens.</p>
+                    <button class="details-btn"
+                        data-title="Seared Scallops"
+                        data-price="$24"
+                        data-description="Beautifully seared scallops accompanied by citrus butter and fresh seasonal greens."
+                        data-category="Starter">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- MAIN COURSES -->
+
+            <article class="menu-card reveal" data-category="mains" data-name="pan-seared truffle duck">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=900" alt="Pan seared duck">
+                    <span class="dish-tag">SIGNATURE</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Pan-Seared Truffle Duck</h3>
+                        <span class="price">$42</span>
+                    </div>
+                    <p>Seared duck breast, black truffle, seasonal vegetables and rich jus.</p>
+                    <button class="details-btn"
+                        data-title="Pan-Seared Truffle Duck"
+                        data-price="$42"
+                        data-description="Our signature duck breast is paired with black truffle, seasonal vegetables and a carefully reduced jus."
+                        data-category="Main Course">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="mains" data-name="wild herb salmon">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900" alt="Salmon dish">
+                    <span class="dish-tag">CHEF'S PICK</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Wild Herb Salmon</h3>
+                        <span class="price">$36</span>
+                    </div>
+                    <p>Fresh salmon, fragrant herbs, lemon beurre blanc and asparagus.</p>
+                    <button class="details-btn"
+                        data-title="Wild Herb Salmon"
+                        data-price="$36"
+                        data-description="Freshly prepared salmon with fragrant wild herbs, lemon beurre blanc and seasonal asparagus."
+                        data-category="Main Course">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="mains" data-name="herb crusted lamb">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900" alt="Lamb main course">
+                    <span class="dish-tag">MAIN COURSE</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Herb-Crusted Lamb</h3>
+                        <span class="price">$45</span>
+                    </div>
+                    <p>Tender lamb, rosemary crust, potato purée and red wine jus.</p>
+                    <button class="details-btn"
+                        data-title="Herb-Crusted Lamb"
+                        data-price="$45"
+                        data-description="Tender lamb with a fragrant rosemary crust, smooth potato purée and a rich red wine jus."
+                        data-category="Main Course">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="mains" data-name="wild mushroom risotto">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=900" alt="Mushroom risotto">
+                    <span class="dish-tag">VEGETARIAN</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Wild Mushroom Risotto</h3>
+                        <span class="price">$29</span>
+                    </div>
+                    <p>Slow-cooked arborio rice, wild mushrooms and aged parmesan.</p>
+                    <button class="details-btn"
+                        data-title="Wild Mushroom Risotto"
+                        data-price="$29"
+                        data-description="Creamy arborio rice slowly cooked with wild mushrooms, finished with aged parmesan and fresh herbs."
+                        data-category="Main Course">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="mains" data-name="filet mignon">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=900" alt="Filet mignon steak">
+                    <span class="dish-tag">HOUSE FAVOURITE</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Filet Mignon</h3>
+                        <span class="price">$48</span>
+                    </div>
+                    <p>Premium beef fillet, roasted garlic, seasonal vegetables and jus.</p>
+                    <button class="details-btn"
+                        data-title="Filet Mignon"
+                        data-price="$48"
+                        data-description="A premium beef fillet served with roasted garlic, seasonal vegetables and our house jus."
+                        data-category="Main Course">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- DESSERTS -->
+
+            <article class="menu-card reveal" data-category="desserts" data-name="dark chocolate fondant">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=900" alt="Chocolate dessert">
+                    <span class="dish-tag">DESSERT</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Dark Chocolate Fondant</h3>
+                        <span class="price">$15</span>
+                    </div>
+                    <p>Warm chocolate fondant, vanilla bean ice cream and cocoa dust.</p>
+                    <button class="details-btn"
+                        data-title="Dark Chocolate Fondant"
+                        data-price="$15"
+                        data-description="A warm chocolate fondant with a soft centre, served alongside vanilla bean ice cream."
+                        data-category="Dessert">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="desserts" data-name="vanilla crème brûlée">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?w=900" alt="Creme brulee">
+                    <span class="dish-tag">DESSERT</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Vanilla Crème Brûlée</h3>
+                        <span class="price">$13</span>
+                    </div>
+                    <p>Classic vanilla custard with a delicate caramelised sugar crust.</p>
+                    <button class="details-btn"
+                        data-title="Vanilla Crème Brûlée"
+                        data-price="$13"
+                        data-description="A classic vanilla custard finished with a thin, crisp layer of caramelised sugar."
+                        data-category="Dessert">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="desserts" data-name="raspberry panna cotta">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=900" alt="Panna cotta dessert">
+                    <span class="dish-tag">DESSERT</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Raspberry Panna Cotta</h3>
+                        <span class="price">$14</span>
+                    </div>
+                    <p>Silky vanilla panna cotta, fresh raspberries and berry coulis.</p>
+                    <button class="details-btn"
+                        data-title="Raspberry Panna Cotta"
+                        data-price="$14"
+                        data-description="A delicate vanilla panna cotta served with fresh raspberries and a bright berry coulis."
+                        data-category="Dessert">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- DRINKS -->
+
+            <article class="menu-card reveal" data-category="drinks" data-name="citrus garden spritz">
+                <div class="menu-image">
+                    <img src="https://www.theisopurecompany.com/cdn/shop/articles/Citrus_Sparkle_Mocktail.jpg?v=1783511846&width=2048" alt="Citrus Garden Spritz">
+                    <span class="dish-tag">DRINK</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Citrus Garden Spritz</h3>
+                        <span class="price">$12</span>
+                    </div>
+                    <p>Fresh citrus, sparkling water, rosemary and a hint of honey.</p>
+                    <button class="details-btn"
+                        data-title="Citrus Garden Spritz"
+                        data-price="$12"
+                        data-description="A refreshing non-alcoholic blend of fresh citrus, sparkling water, rosemary and honey."
+                        data-category="Drink">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="drinks" data-name="hibiscus berry cooler">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=900" alt="Berry cooler">
+                    <span class="dish-tag">DRINK</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Hibiscus Berry Cooler</h3>
+                        <span class="price">$11</span>
+                    </div>
+                    <p>Chilled hibiscus infusion, mixed berries and fresh mint.</p>
+                    <button class="details-btn"
+                        data-title="Hibiscus Berry Cooler"
+                        data-price="$11"
+                        data-description="A chilled hibiscus infusion blended with mixed berries and fresh mint."
+                        data-category="Drink">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="drinks" data-name="vanilla cold brew">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=900" alt="Cold brew coffee">
+                    <span class="dish-tag">DRINK</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Vanilla Cold Brew</h3>
+                        <span class="price">$10</span>
+                    </div>
+                    <p>Slow-steeped coffee, vanilla notes and a smooth finish.</p>
+                    <button class="details-btn"
+                        data-title="Vanilla Cold Brew"
+                        data-price="$10"
+                        data-description="Slow-steeped coffee with gentle vanilla notes, served chilled for a smooth finish."
+                        data-category="Drink">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card reveal" data-category="drinks" data-name="golden mango tonic">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=900" alt="Fresh mango drink">
+                    <span class="dish-tag">DRINK</span>
+                </div>
+                <div class="menu-card-content">
+                    <div class="dish-heading">
+                        <h3>Golden Mango Tonic</h3>
+                        <span class="price">$12</span>
+                    </div>
+                    <p>Fresh mango, lime, sparkling tonic and a touch of ginger.</p>
+                    <button class="details-btn"
+                        data-title="Golden Mango Tonic"
+                        data-price="$12"
+                        data-description="A bright combination of fresh mango, lime, sparkling tonic and a gentle touch of ginger."
+                        data-category="Drink">
+                        Discover Dish <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults" hidden>
+            No dishes found. Try another search.
+        </p>
+
+        <p class="menu-note">
+            Please inform our team of any dietary requirements or allergies.</p>
+    </section>
+    <section class="menu-cta reveal">
+    <span class="eyebrow">YOUR TABLE AWAITS</span>
+    <h2>Make an Evening <em>Memorable.</em></h2>
+    <p>
+        Good food deserves good company. Join us for an exceptional
+        dining experience.
+    </p>
+    <a href="contact.html" class="gold-button">
+        Reserve Your Table <span>↗</span>
+    </a>
+</section>
+
+<footer class="site-footer">
+    <a href="index.html" class="footer-brand">SAVOR <span>&</span> SAGE</a>
+    <p>Thoughtfully prepared. Beautifully served.</p>
+    <span>© <span id="currentYear"></span> Savor & Sage. All rights reserved.</span>
+</footer>
+
+<!-- DISH DETAILS MODAL -->
+
+<div class="dish-modal" id="dishModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" aria-label="Close details" data-close-modal>&times;</button>
+
+        <span class="eyebrow" id="modalCategory">OUR SELECTION</span>
+        <h2 id="modalTitle">Dish Name</h2>
+        <p id="modalDescription"></p>
+
+        <div class="modal-bottom">
+            <span id="modalPrice"></span>
+            <a href="contact.html" class="gold-button">Reserve a Table ↗</a>
+        </div>
     </div>
+</div>
 
-    <!-- 9 Items Grid -->
-    <div class="grid" id="menu-grid">
-      
-      <!-- MAIN FOOD 1 -->
-      <div class="card" data-category="food">
-        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Prime Ribeye">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Truffle Butter Ribeye</span>
-            <span class="price">$42</span>
-          </div>
-          <p>Grass-fed prime beef pan-seared with rosemary butter and truffle mash.</p>
-        </div>
-      </div>
-
-      <!-- MAIN FOOD 2 -->
-      <div class="card" data-category="food">
-        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Pan-Seared Salmon">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Citrus Glazed Salmon</span>
-            <span class="price">$34</span>
-          </div>
-          <p>Wild-caught Atlantic salmon pan-seared with blood orange reduction and quinoa.</p>
-        </div>
-      </div>
-
-      <!-- MAIN FOOD 3 -->
-      <div class="card" data-category="food">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Sage Bowl">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Sage & Herb Garden Bowl</span>
-            <span class="price">$18</span>
-          </div>
-          <p>Fresh organic greens, macadamia nuts, wild herbs, and balsamic drizzle.</p>
-        </div>
-      </div>
-
-      <!-- FAST FOOD 1 -->
-      <div class="card" data-category="fastfood">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Gourmet Burger">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Smoked Wagyu Burger</span>
-            <span class="price">$22</span>
-          </div>
-          <p>Double Wagyu patty, smoked cheddar, caramelized onions, and truffle mayo on brioche.</p>
-        </div>
-      </div>
-
-      <!-- FAST FOOD 2 -->
-      <div class="card" data-category="fastfood">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Artisan Pizza">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Wild Basil Margherita</span>
-            <span class="price">$24</span>
-          </div>
-          <p>Wood-fired sourdough crust, fresh fior di latte mozzarella, and San Marzano tomatoes.</p>
-        </div>
-      </div>
-
-      <!-- FAST FOOD 3 -->
-      <div class="card" data-category="fastfood">
-        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80" alt="Crispy Chicken Wings">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Honey Garlic Wings</span>
-            <span class="price">$16</span>
-          </div>
-          <p>Crispy fried jumbo wings tossed in artisanal honey garlic glaze and sesame.</p>
-        </div>
-      </div>
-
-      <!-- DRINKS 1 -->
-      <div class="card" data-category="drinks">
-        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Craft Cocktail">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Smoked Sage Botanical</span>
-            <span class="price">$15</span>
-          </div>
-          <p>Infused botanical gin, fresh lemon juice, elderflower syrup, and charred sage.</p>
-        </div>
-      </div>
-
-      <!-- DRINKS 2 -->
-      <div class="card" data-category="drinks">
-        <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80" alt="Fresh Berry Smoothie">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Wild Berry Elixir</span>
-            <span class="price">$10</span>
-          </div>
-          <p>Blended organic blackberries, blueberries, mint, and coconut water.</p>
-        </div>
-      </div>
-
-      <!-- DRINKS 3 -->
-      <div class="card" data-category="drinks">
-        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Signature Mocktail">
-        <div class="card-content">
-          <div class="card-title">
-            <span>Sparkling Citrus Passion</span>
-            <span class="price">$12</span>
-          </div>
-          <p>Sparkling mineral water, passion fruit puree, lime juice, and fresh rosemary sprig.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Savor & Sage Restaurant. All Rights Reserved.</p>
-  </footer>
-
-  <!-- External Script File -->
-  <script src="script.js"></script>
 </body>
 </html>
